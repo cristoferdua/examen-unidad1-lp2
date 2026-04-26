@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # examendu - Proyecto Spring Boot
 
 ## Tecnologías
@@ -98,3 +99,6 @@ src/main/java/com/examendu/peliculas/
 | PUT | /api/peliculas/{id} | Actualizar película |
 | DELETE | /api/peliculas/{id} | Eliminar película |
 | POST | /api/peliculas/con-generos | Crear película con géneros |
+=======
+# examen-unidad1-lp2
+>>>>>>> 7491d228b17ed3a540f45f7e11958d286eb1b3a4
