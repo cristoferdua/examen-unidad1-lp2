@@ -1,0 +1,49 @@
+### Director - CRUD ###
+
+### Obtener todos los directores
+GET http://localhost:8080/api/directores
+Accept: application/json
+
+###
+
+### Obtener director por ID (reemplaza el UUID)
+GET http://localhost:8080/api/directores/{{directorId}}
+Accept: application/json
+
+###
+
+### Crear director
+POST http://localhost:8080/api/directores
+Content-Type: application/json
+
+{
+  "nombre": "cristofer dua",
+  "nacionalidad": "Peruano"
+}
+
+###
+
+### Crear director 2
+POST http://localhost:8080/api/directores
+Content-Type: application/json
+
+{
+  "nombre": "Steven Spielberg",
+  "nacionalidad": "Estadounidense"
+}
+
+###
+
+### Actualizar director (reemplaza el UUID)
+PUT http://localhost:8080/api/directores/{{directorId}}
+Content-Type: application/json
+
+{
+  "nombre": "Christopher Nolan",
+  "nacionalidad": "Británico-Americano"
+}
+
+###
+
+### Eliminar director (reemplaza el UUID)
+DELETE http://localhost:8080/api/directores/{{directorId}}

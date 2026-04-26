@@ -1,0 +1,88 @@
+### Película - CRUD ###
+
+### Obtener todas las películas
+GET http://localhost:8080/api/peliculas
+Accept: application/json
+
+###
+
+### Obtener película por ID (reemplaza el UUID)
+GET http://localhost:8080/api/peliculas/{{peliculaId}}
+Accept: application/json
+
+###
+
+### Crear película (necesita directorId existente)
+POST http://localhost:8080/api/peliculas
+Content-Type: application/json
+
+{
+  "titulo": "Inception",
+  "sinopsis": "Un ladrón que roba secretos corporativos a través del uso de la tecnología de compartir sueños.",
+  "anyoEstreno": 2010,
+  "duracionMinutos": 148,
+  "clasificacion": "PG-13",
+  "directorId": "{{directorId}}"
+}
+
+###
+
+### Actualizar película (reemplaza el UUID)
+PUT http://localhost:8080/api/peliculas/{{peliculaId}}
+Content-Type: application/json
+
+{
+  "titulo": "Inception: El Origen",
+  "sinopsis": "Un ladrón especializado en entrar a los sueños de las personas para robar sus secretos más profundos.",
+  "anyoEstreno": 2010,
+  "duracionMinutos": 148,
+  "clasificacion": "PG-13",
+  "directorId": "{{directorId}}"
+}
+
+###
+
+### Eliminar película (reemplaza el UUID)
+DELETE http://localhost:8080/api/peliculas/{{peliculaId}}
+
+###
+
+### ============================================ ###
+### ENDPOINT ESTRELLA: Crear película con géneros ###
+### ============================================ ###
+
+### Crear película con géneros asignados
+POST http://localhost:8080/api/peliculas/con-generos
+Content-Type: application/json
+
+{
+  "titulo": "Inception",
+  "sinopsis": "Un ladrón que roba secretos corporativos a través del uso de la tecnología de compartir sueños. Se le ofrece la oportunidad de borrar un recuerdo de la mente de un CEO a cambio de la oportunidad de volver a casa.",
+  "anyoEstreno": 2010,
+  "duracionMinutos": 148,
+  "clasificacion": "PG-13",
+  "directorId": "7f8d3ce1-80a7-4ab5-b334-c4d1876ff480",
+  "generoIds": [
+    "73a82e84-d6bf-46ab-8121-a2557daff6ba",
+    "786f7f46-7c3b-4d0d-8283-5ad068622925"
+  ]
+}
+
+###
+
+### Crear película con géneros 2
+POST http://localhost:8080/api/peliculas/con-generos
+Content-Type: application/json
+
+{
+  "titulo": "Jurassic Park",
+  "sinopsis": "Un parque temático con dinosaurios clonados sufre un fallo de seguridad catastrófico.",
+  "anyoEstreno": 1993,
+  "duracionMinutos": 127,
+  "clasificacion": "PG-13",
+  "directorId": "{{directorId2}}",
+  "generoIds": [
+    "{{generoId1}}",
+    "{{generoId4}}"
+  ]
+}

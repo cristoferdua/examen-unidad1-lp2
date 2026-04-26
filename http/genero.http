@@ -1,0 +1,71 @@
+### Género - CRUD ###
+
+### Obtener todos los géneros
+GET http://localhost:8080/api/generos
+Accept: application/json
+
+###
+
+### Obtener género por ID (reemplaza el UUID)
+GET http://localhost:8080/api/generos/{{generoId}}
+Accept: application/json
+
+###
+
+### Crear género - Ciencia Ficción
+POST http://localhost:8080/api/generos
+Content-Type: application/json
+
+{
+  "nombre": "Ciencia Ficción",
+  "descripcion": "Películas que exploran conceptos científicos y tecnológicos innovadores"
+}
+
+###
+
+### Crear género - Acción
+POST http://localhost:8080/api/generos
+Content-Type: application/json
+
+{
+  "nombre": "Acción",
+  "descripcion": "Películas con escenas de acción y aventura intensas"
+}
+
+###
+
+### Crear género - Drama
+POST http://localhost:8080/api/generos
+Content-Type: application/json
+
+{
+  "nombre": "Drama",
+  "descripcion": "Películas centradas en el desarrollo emocional de los personajes"
+}
+
+###
+
+### Crear género - Thriller
+POST http://localhost:8080/api/generos
+Content-Type: application/json
+
+{
+  "nombre": "Thriller",
+  "descripcion": "Películas de suspenso que mantienen la tensión constante"
+}
+
+###
+
+### Actualizar género (reemplaza el UUID)
+PUT http://localhost:8080/api/generos/{{generoId}}
+Content-Type: application/json
+
+{
+  "nombre": "Ciencia Ficción",
+  "descripcion": "Películas futuristas con tecnología avanzada"
+}
+
+###
+
+### Eliminar género (reemplaza el UUID)
+DELETE http://localhost:8080/api/generos/{{generoId}}
